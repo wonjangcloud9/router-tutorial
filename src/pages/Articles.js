@@ -1,19 +1,39 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const Articles = () => {
+  const activeStyle = {
+    color: "green",
+    fontSize: 21,
+  };
+
   return (
     <div>
       <Outlet />
       <h1>Articles</h1>
       <ul>
         <li>
-          <Link to="/articles/1">Article 1</Link>
+          <NavLink
+            to="/articles/1"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Article 1
+          </NavLink>
         </li>
         <li>
-          <Link to="/articles/2">Article 2</Link>
+          <NavLink
+            to="/articles/2"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Article 2
+          </NavLink>
         </li>
         <li>
-          <Link to="/articles/3">Article 3</Link>
+          <NavLink
+            to="/articles/3"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          >
+            Article 3
+          </NavLink>
         </li>
       </ul>
     </div>
