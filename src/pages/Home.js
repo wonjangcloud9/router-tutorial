@@ -17,6 +17,9 @@ const Home = () => {
         <li>
           <Link to="/profiles/unknown">unknown</Link>
         </li>
+        <li>
+          <Link to="/articles">Articles</Link>
+        </li>
       </ul>
     </div>
   );
